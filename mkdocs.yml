@@ -92,12 +92,18 @@ nav:
     - Home: index.md
     - 2020:
         - Visualización de datos en RStudio:
-            - 2020/01_visualizacion/intro.md
-            - docs/2020/01_visualizacion/codigo_r.ipynb
-        - docs/2020/02_analisis_sobrevivencia/codigo_r.ipynb
-        - docs/2020/03_rmarkdown/codigo_r.ipynb
+            - Descripción: 2020/01_visualizacion/intro.md
+            - codigo: 2020/01_visualizacion/codigo_r.ipynb
+        - Introducción al Análisis de Sobrevivencia:
+            - Descripción: 2020/02_analisis_sobrevivencia/intro.md
+            - codigo: 2020/02_analisis_sobrevivencia/codigo_r.ipynb
+        - Informes con R Markdown:
+            - Descripción: 2020/03_rmarkdown/intro.md
+            - codigo: 2020/03_rmarkdown/codigo_r.ipynb
     - 2022:
-        - docs/2020/01_visualizacion/codigo_r.ipynb
-        - docs/2020/02_analisis_sobrevivencia/codigo_r.ipynb
-        - docs/2020/03_rmarkdown/codigo_r.ipynb
-
+        - Introducción Psicometría:
+            - Descripción: 2022/01_psicometria/intro.md
+            - codigo: 2022/01_psicometria/codigo_r.ipynb
+        - Estadística Geoespacial - R:
+            - Descripción: 2022/02_geoespacial/intro.md
+            - codigo: 2022/02_geoespacial/codigo_r.ipynb

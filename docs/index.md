@@ -14,11 +14,11 @@ nuestro canal de [Youtube](https://www.youtube.com/channel/UCKUks7O_mOA1TYOI6zO4
 
 ## Contenidos temáticos
 
-* Introducción a la programación
-* Introducción a Python
-* Sintaxis básicas
-* Flujo de Control
-* Estructura de datos
-* Funciones
-* Errores y excepciones
-* Buenas prácticas
+* [2020]((2020/01_visualizacion/intro.md)) 
+    * [Visualización de datos en RStudio](2020/01_visualizacion/intro.md)
+    * [Introducción al Análisis de Sobrevivencia](2020/02_analisis_sobrevivencia/intro.md)
+    * [Informes con R Markdown](2020/03_rmarkdown/intro.md)
+* [2022](2022/01_psicometria/intro.md)
+    * [Introducción Psicometría](2022/01_psicometria/intro.md)
+    * [Estadística Geoespacial - R](2022/02_geoespacial/intro.md)
+
