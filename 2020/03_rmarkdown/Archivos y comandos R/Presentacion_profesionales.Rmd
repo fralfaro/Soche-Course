@@ -1,0 +1,144 @@
+---
+title: "Mujeres profesionales en las distintas áreas de la ciencia"
+output:
+  powerpoint_presentation:
+    reference_doc: plantilla.curso.pptx
+  ioslides_presentation: default
+  slidy_presentation: default
+  
+---
+
+```{r include=FALSE}
+library(gsheet)
+
+base<-gsheet2tbl("https://drive.google.com/file/d/17B7RYoztvY26S4xDjMIwNljL3b7CZ2Nu/view?usp=sharing")
+summary(base)
+names(base)
+unique(base$area_descripcion)
+unique(base$gran_area_descripcion)
+```
+
+## Tabla de proporciones de profesionales por grandes areas
+
+```{r echo=FALSE, fig.align='right', message=FALSE, warning=FALSE, paged.print=FALSE}
+library(tibble) 
+library(knitr)
+library(flextable)
+T0.0<-xtabs(~ gran_area_descripcion+ sexo  , base)
+table.0.0<-100*round(prop.table(T0.0,1),3)
+tabla<-as_tibble(table.0.0)
+Tabla<-flextable(tabla)
+Tabla<-merge_v(Tabla, j=c("sexo"))
+Tabla<-theme_vanilla(Tabla)
+autofit(Tabla)
+ 
+```
+
+## Gráfico proporciones de profesionales por grandes areas
+ 
+```{r echo=FALSE,  fig.height=5, fig.width=10,message=FALSE, warning=FALSE, paged.print=FALSE}
+library(ggplot2)
+bp<- ggplot(tabla, aes(x="", y=n, fill=sexo))+ 
+  geom_bar(width = 1, stat = "identity")+ facet_grid(.~gran_area_descripcion)+
+  theme(strip.text.x = element_text(size = 8, colour = "red", angle = 60)) 
+bp + coord_polar("y", start=0)+ theme(legend.position="top")
+```
+
+## Análisis por gran área
+
+- CIENCIAS NATURALES Y EXACTAS
+- INGENIERÍAS Y TECNOLOGÍAS
+- CIENCIAS MEDICAS Y DE LA SALUD
+- CIENCIAS AGRÍCOLAS
+- CIENCIAS SOCIALES
+- HUMANIDADES
+
+
+```{r message=FALSE, warning=FALSE, include=FALSE, paged.print=FALSE}
+datos<-subset(base, gran_area_descripcion=="CIENCIAS AGRÍCOLAS" & area_descripcion!="SIN DATOS" & edad>0)
+names(datos)
+datos$area<-factor(datos$area_descripcion)
+```
+
+
+## Tabla: Porcentaje investigadores por sexo según disciplina
+ 
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+ library(knitr)
+ T1<-xtabs(~ area_descripcion+ sexo, datos)
+ table.1<-100*round(prop.table(T1,1),3)
+ kable(table.1,digits = 2) 
+ 
+```
+  
+## Gráfico:Porcentaje investigadores por sexo según disciplina 
+
+```{r echo=FALSE, fig.height=5, fig.width=10, message=FALSE, warning=FALSE}
+  library(ggplot2) 
+  proporciones<-as_tibble(table.1) 
+  names(proporciones)<-c("area","sexo", "proporcion") 
+  bp<- ggplot(proporciones, aes(x="", y=proporcion, fill=sexo))+ 
+  geom_bar(width = 1, stat = "identity")+ facet_grid(.~area)+
+  theme(strip.text.x = element_text(size = 8, colour = "black", angle = 60)) 
+  bp + coord_polar("y", start=0)+ theme(legend.position="top") 
+```
+
+## Tabla: Rangos de edad segun categorias
+
+```{r echo=FALSE, fig.height=5, fig.width=10, message=FALSE, warning=FALSE}
+datos$grupo.edad<-cut(datos$edad,breaks = seq(10, 100, by = 20), 
+labels =c( "< 30]" ,"(30-50]", "(50-70]", "(70-90]" ))
+ T2<-xtabs(~area_descripcion +grupo.edad, datos)
+ table.2<-100*round(prop.table(T2,1),2)
+ kable(table.2)
+```
+ 
+## Gráfico: Rangos de edad según áreas
+
+```{r echo=FALSE,fig.height=5, fig.width=10,  message=FALSE, warning=FALSE}
+library(ggplot2)
+c <- ggplot(datos, aes(grupo.edad, fill=sexo))
+cc<-c + geom_bar(aes(y = (..count..)/tapply(..count..,..PANEL..,sum)[..PANEL..]))  + facet_grid(.~area_descripcion  )
+
+ccc<-cc + theme(strip.text.x = element_text(size = 10, colour = "black", angle = 60))
+
+ccc1<-ccc + theme(axis.text.x = element_text(angle=90, vjust=1, size=10))+ theme(legend.position="top")
+
+cccc1<-ccc1+ggtitle("Distribución por genero") + theme(plot.title = element_text(lineheight=.8, face="bold",colour="black"))+ ylab("proporcion")
+ print(cccc1)
+```
+
+## Tabla edad según las áereas 
+ 
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+library(plyr)
+library(flextable)
+library(magrittr)
+resumen <-ddply(datos, .(area_descripcion), summarise, edad.media=mean(edad, na.rm = TRUE), maximo=max(edad, na.rm = TRUE),minimo=min(edad, na.rm = TRUE))
+colnames(resumen)<-c("Area","promedio","máxima", "mínima")
+kable(resumen, digits = 2, caption=" ")
+```
+
+## Gráfico edad según las áereas y los años
+ 
+```{r echo=FALSE, fig.height=5, fig.width=10}
+library(ggplot2)
+resumen <-ddply(datos, .(area, anio, sexo), summarise, edad.media=mean(edad, na.rm = TRUE), maximo=max(edad, na.rm = TRUE),minimo=min(edad, na.rm = TRUE))
+g<-ggplot(resumen, aes(anio, edad.media,  color = area)) +geom_line(size=1)+ geom_point()+ facet_grid(.~sexo) + theme(
+  legend.title = element_text(color = "blue", size = 14),
+  legend.text = element_text(color = "red", size = 8)
+)
+ 
+print(g)
+
+```
+
+## Gráfico de dispersión de la edad según las áereas y los sexos
+
+```{r echo=FALSE}
+g1<- ggplot(datos, aes(area_descripcion,edad) )+ geom_boxplot( )+  theme(axis.text.x = element_text(angle=90, vjust=1,  size=8))+facet_grid(.~sexo)+coord_flip()+  theme_bw()
+print(g1)
+```
+
+
+
