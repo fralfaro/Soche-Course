@@ -1,4 +1,4 @@
-# Introducción a la Psicometría: Técnicas estadísticas y modelos psicométricos en la medición de variables no observables
+# Introducción a la Psicometría
 
 ## Presentador
 
