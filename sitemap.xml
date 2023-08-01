@@ -11,17 +11,7 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://github.com/fralfaro/Soche-Course/2020/01_visualizacion/codigo_r/</loc>
-         <lastmod>2023-08-01</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://github.com/fralfaro/Soche-Course/2020/01_visualizacion/intro/</loc>
-         <lastmod>2023-08-01</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://github.com/fralfaro/Soche-Course/2020/02_analisis_sobrevivencia/codigo_r/</loc>
          <lastmod>2023-08-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -31,32 +21,12 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://github.com/fralfaro/Soche-Course/2020/03_rmarkdown/</loc>
-         <lastmod>2023-08-01</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://github.com/fralfaro/Soche-Course/2020/03_rmarkdown/codigo_r/</loc>
-         <lastmod>2023-08-01</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://github.com/fralfaro/Soche-Course/2020/03_rmarkdown/intro/</loc>
          <lastmod>2023-08-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://github.com/fralfaro/Soche-Course/2022/01_psicometria/codigo_r/</loc>
-         <lastmod>2023-08-01</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://github.com/fralfaro/Soche-Course/2022/01_psicometria/intro/</loc>
-         <lastmod>2023-08-01</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://github.com/fralfaro/Soche-Course/2022/02_geoespacial/codigo_r/</loc>
          <lastmod>2023-08-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
