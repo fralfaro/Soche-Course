@@ -1,14 +1,30 @@
-# Descripción
+# Cómo diseñar un informe de manera rápida y sencilla con R Markdown
 
-* **Presentador**: Stephanie Orellana
-* **Descripción**: Ingeniera Agrónoma y Magíster en Recursos Naturales por la Pontificia Universidad Católica de Chile, Coorganizadora de RLadies Santiago y PyLadies Valparaíso.
-* **Temario del minicurso**:
-     * Modelación
-     * Aprendizaje estadístico
-     * Diferencias de trabajar con datos no espaciales v/s datos geoespaciales.
-     * Correlación espacial y funciones para hacer validación cruzada considerando la componente espacial
-     * Procesamiento de datos geoespaciales.
-* **Programación del minicurso**:
-     * **Sesión 1**: Miércoles 3 de agosto de 2022 a las 15:30 hrs. ([Youtube](https://www.youtube.com/watch?v=smUXmguUiow&t=37s&ab_channel=SociedadChilenadeEstad%C3%ADstica), [Presentación]())
-     * **Sesión 2**: Miércoles 10 de agosto de 2022 a las 15:30 hrs.  ([Youtube](https://www.youtube.com/watch?v=smUXmguUiow&t=37s&ab_channel=SociedadChilenadeEstad%C3%ADstica), [Presentación]())
-* **Marerial del curso**: [link]()
+## Presentador
+
+Teresa Boca, Ingeniera Agrónoma, con título de postgrado 
+Magister Scientiae, Área Biometría y Doctora en ciencias agropecuarias.
+
+## Temario
+
+* Cómo empezar: primer informe con R Markdown
+* Tipos de reportes. Características de los documentos básicos de Rmarkdown
+* Edición del formato de los textos. Incluir código de R en el informe
+* Opciones de los chunk
+* Gráficos y Tablas
+* Inclusión de fórmulas matemáticas
+* Otros tipos de documentos: Presentaciones, Bookdown
+* Plantillas o theme
+
+## Material 
+| Sesión   | Video                                                                                                                                                                                                                                    | Presentación                                                                                                                                                                  | Github                                                                                                                                                                                                                  |
+|----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Sesión 1 | <a href="https://www.youtube.com/watch?v=8SZL4mHHNNo&ab_channel=SociedadChilenadeEstad%C3%ADstica" target="_parent"><img src="https://img.shields.io/badge/YouTube-%23FF0000.svg?style=for-the-badge&logo=YouTube&logoColor=white"/></a> | <a href="docs/2020/03_rmarkdown/clase_01.pdf" target="_parent"><img src="https://img.shields.io/badge/PDF-%23FF0000.svg?style=for-the-badge&logo=adobe&logoColor=white"/></a> | <a href="https://github.com/tereboca/Rmarkdown_SOCHE/tree/main" target="_parent"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white" alt="Open In Colab"/></a> |
+| Sesión 2 | <a href="https://www.youtube.com/watch?v=RDvCZ0xvboI&ab_channel=SociedadChilenadeEstad%C3%ADstica" target="_parent"><img src="https://img.shields.io/badge/YouTube-%23FF0000.svg?style=for-the-badge&logo=YouTube&logoColor=white"/></a> | <a href="docs/2020/03_rmarkdown/clase_01.pdf" target="_parent"><img src="https://img.shields.io/badge/PDF-%23FF0000.svg?style=for-the-badge&logo=adobe&logoColor=white"/></a> | <a href="https://github.com/tereboca/Rmarkdown_SOCHE/tree/main" target="_parent"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white" alt="Open In Colab"/></a> |
+
+
+
+
+
+
+

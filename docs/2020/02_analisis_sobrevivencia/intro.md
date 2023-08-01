@@ -1,14 +1,25 @@
-# Descripción
+# Introducción al análisis de sobrevivencia usando el software R
 
-* **Presentador**: Stephanie Orellana
-* **Descripción**: Ingeniera Agrónoma y Magíster en Recursos Naturales por la Pontificia Universidad Católica de Chile, Coorganizadora de RLadies Santiago y PyLadies Valparaíso.
-* **Temario del minicurso**:
-     * Modelación
-     * Aprendizaje estadístico
-     * Diferencias de trabajar con datos no espaciales v/s datos geoespaciales.
-     * Correlación espacial y funciones para hacer validación cruzada considerando la componente espacial
-     * Procesamiento de datos geoespaciales.
-* **Programación del minicurso**:
-     * **Sesión 1**: Miércoles 3 de agosto de 2022 a las 15:30 hrs. ([Youtube](https://www.youtube.com/watch?v=smUXmguUiow&t=37s&ab_channel=SociedadChilenadeEstad%C3%ADstica), [Presentación]())
-     * **Sesión 2**: Miércoles 10 de agosto de 2022 a las 15:30 hrs.  ([Youtube](https://www.youtube.com/watch?v=smUXmguUiow&t=37s&ab_channel=SociedadChilenadeEstad%C3%ADstica), [Presentación]())
-* **Marerial del curso**: [link]()
+## Presentador
+
+Diego Gallardo, Doctor en Ciencias mención Estadística, Universidad de São Paulo, Brasil, 2014 Ingeniero Estadístico, Universidad de Santiago de Chile Líneas de investigación: Análisis de sobrevivencia con fracción de cura,
+modelos de regresión, métodos computacionales aplicados a la estadística.
+
+## Temario
+
+* ¿Qué es la censura? Definición y tipos de censura.
+* Principales funciones de interés: función de densidad, sobrevivencia, riesgo, riesgo acumulado.
+* Estimadores no paramétricos de la función de sobrevivencia.
+* Comparación de curvas de sobrevivencia entre diferentes grupos.
+* Principales modelos paramétricos en el análisis de sobrevivencia.
+* Inferencia para datos censurados.
+* Análisis de residuos para datos censurados.
+* Otros tópicos adicionales de análisis de sobrevivencia.
+
+## Material 
+| Sesión   | Video                                                                                                                                                                                                                                           | Presentación                                                                                                                                                                               | Código                                                                                                                                                                                                  |
+|----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Sesión 1 | <a href="https://www.youtube.com/watch?v=xULSqdFxCfw&t=799s&ab_channel=SociedadChilenadeEstad%C3%ADstica" target="_parent"><img src="https://img.shields.io/badge/YouTube-%23FF0000.svg?style=for-the-badge&logo=YouTube&logoColor=white"/></a> | <a href="docs/2020/02_analisis_sobrevivencia/clase_01.pdf" target="_parent"><img src="https://img.shields.io/badge/PDF-%23FF0000.svg?style=for-the-badge&logo=adobe&logoColor=white"/></a> | <a href="docs/2020/02_analisis_sobrevivencia/codigo_01.R" target="_parent"><img src="https://img.shields.io/badge/r-%23276DC3.svg?style=for-the-badge&logo=r&logoColor=white" alt="Open In Colab"/></a> |
+| Sesión 2 | <a href="https://www.youtube.com/watch?v=VnK-fKkcngA&ab_channel=SociedadChilenadeEstad%C3%ADstica" target="_parent"><img src="https://img.shields.io/badge/YouTube-%23FF0000.svg?style=for-the-badge&logo=YouTube&logoColor=white"/></a>        | <a href="docs/2020/02_analisis_sobrevivencia/clase_02.pdf" target="_parent"><img src="https://img.shields.io/badge/PDF-%23FF0000.svg?style=for-the-badge&logo=adobe&logoColor=white"/></a> | <a href="docs/2020/02_analisis_sobrevivencia/codigo_02.R" target="_parent"><img src="https://img.shields.io/badge/r-%23276DC3.svg?style=for-the-badge&logo=r&logoColor=white" alt="Open In Colab"/></a> |
+
+

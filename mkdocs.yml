@@ -89,5 +89,12 @@ plugins:
 # TOC
 nav:
     - index.md
+    - 2020:
+        - 2020/01_visualizacion/intro.md
+        - 2020/02_analisis_sobrevivencia/intro.md
+        - 2020/03_rmarkdown/intro.md
+    - 2022:
+        - 2022/01_psicometria/intro.md
+        - 2022/02_geoespacial/intro.md
     - 2023:
         - 2023/01_series_temporales/intro.md
